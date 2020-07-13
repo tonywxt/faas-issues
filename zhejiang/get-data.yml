@@ -1,0 +1,12 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://172.16.12.103:31112
+functions:
+  get-data:
+    lang: python3
+    handler: ./get-data
+    image: harbor.aismelt.cn/zhejiang/get-data_ljf:1.1
+    environment:
+      combine_output: false
+

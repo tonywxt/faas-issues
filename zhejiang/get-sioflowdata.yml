@@ -1,0 +1,12 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://172.16.12.103:31112
+functions:
+  get-sioflowdata:
+    lang: python3
+    handler: ./get-sioflowdata
+    image: harbor.aismelt.cn/zhejiang/get-sioflowdata_ljf:1.0
+    environment:
+      combine_output: false
+
